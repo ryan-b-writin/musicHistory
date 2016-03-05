@@ -80,7 +80,7 @@ select {
 /**/
 /*right song display*/
 /**/
-.nowPlaying {
+#nowPlaying {
   background-color: #FEFAC0;
   float: right;
   border: .18em solid black;
@@ -89,38 +89,32 @@ select {
   height: 22.2em;
 }
 
-.nowPlaying h2 {
+#nowPlaying h2 {
   color: #785616;
 }
 
-.nowPlaying li { 
+#nowPlaying li { 
   display: inline-block;
   border-right: .18em solid black;
   padding: 0 .25em;
 }
 
-.nowPlaying li:last-of-type {
+#nowPlaying li:last-of-type {
   border: none;
 }
 /**/
 /*add song view*/
 /**/
 
-#addSong {
-  top: 90px;
-  left: 500px;
+#addView {
   display: block;
-  margin: 50px auto;
-  text-align: auto;
-  position: fixed;
-}
-
-#addViewNav {
-  positon: fixed;
-  top: 50px;
-  left: 50px;
+  /*max-width: 200px;*/
 }
 
 .hidden {
   visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
 }
