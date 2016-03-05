@@ -11,89 +11,92 @@
 <!-- Top nav bar -->
   <nav class="blocks">
     <ul>  
-      <li><a href="" class="selected" onsubmit="return false">View Music</a></li>
-      <li><a href="" id="addLink">Add Music</a></li>
-      <li><a href="">Profile</a></li>
+      <li><a href="#" id="viewLink" class="selected">View Music</a></li>
+      <li><a href="#" id="addLink">Add Music</a></li>
+      <li><a href="#" id="profileLink">Profile</a></li>
     </ul>
   </nav>
-
-<!-- left options box -->
-  <form action="" class="songInfo blocks defView">
-    <label>Song Length:<br><input type="range" value="song length:"></label>
-    <br>
-<!-- artist pulldown -->
-      <label>Artist:<br><select name="artist">
-        <option value="cake">Cake</option>
-        <option value="cake">Cake</option>
-        <option value="cake">Cake</option>
-        <option value="cake">Cake</option>
-        <option value="cake">Cake</option>
-      </select></label>
+<!-- default view -->
+  <section id="defView">
+  <!-- left options box -->
+    <form action="" class="songInfo blocks">
+      <label>Song Length:<br><input type="range" value="song length:"></label>
       <br>
-<!-- album pulldown -->
-      <label>Album:<br><select>
-        <option value="fashionNugget">Fashion Nugget</option>
-        <option value="fashionNugget">Fashion Nugget</option>
-        <option value="fashionNugget">Fashion Nugget</option>
-        <option value="fashionNugget">Fashion Nugget</option>
-        <option value="fashionNugget">Fashion Nugget</option>
-      </select></label>
+  <!-- artist pulldown -->
+        <label>Artist:<br><select name="artist">
+          <option value="cake">Cake</option>
+          <option value="cake">Cake</option>
+          <option value="cake">Cake</option>
+          <option value="cake">Cake</option>
+          <option value="cake">Cake</option>
+        </select></label>
+        <br>
+  <!-- album pulldown -->
+        <label>Album:<br><select>
+          <option value="fashionNugget">Fashion Nugget</option>
+          <option value="fashionNugget">Fashion Nugget</option>
+          <option value="fashionNugget">Fashion Nugget</option>
+          <option value="fashionNugget">Fashion Nugget</option>
+          <option value="fashionNugget">Fashion Nugget</option>
+        </select></label>
+        <br>
+  <!-- checkboxes -->
+      <section>
+        <label>Genre:<br>
+          <div class="cbox">
+            <label><input type="checkbox" class="genre"> Rock</label><br>
+            <label><input type="checkbox" class="genre"> Pop</label><br>
+            <label><input type="checkbox" class="genre"> Blues</label><br>
+          </div>
+          <div class="cbox">
+            <label><input type="checkbox" class="genre"> Classical</label><br>
+            <label><input type="checkbox" class="genre"> Jazz</label><br>
+            <label><input type="checkbox" class="genre"> Hip Hop</label><br>
+          </div>
+        </label>
+      </section>
       <br>
-<!-- checkboxes -->
-    <section>
-      <label>Genre:<br>
-        <div class="cbox defView">
-          <label><input type="checkbox" class="genre"> Rock</label><br>
-          <label><input type="checkbox" class="genre"> Pop</label><br>
-          <label><input type="checkbox" class="genre"> Blues</label><br>
-        </div>
-        <div class="cbox">
-          <label><input type="checkbox" class="genre"> Classical</label><br>
-          <label><input type="checkbox" class="genre"> Jazz</label><br>
-          <label><input type="checkbox" class="genre"> Hip Hop</label><br>
-        </div>
-      </label>
-    </section>
-    <br>
-<!-- filter button -->
-    <a href="" class="filter">Filter</a>
-  </form>
+  <!-- filter button -->
+      <a href="" class="filter">Filter</a>
+    </form>
 
-<!-- right song display -->
-  <div class="nowPlaying blocks defView">
-    <h2>Song Name:</h2>
-    <ul>
-      <li>Artist Name</li>
-      <li>Album Name</li>
-      <li>Genre</li>
-    </ul>
-    <h2>Song Name:</h2>
-    <ul>
-      <li>Artist Name</li>
-      <li>Album Name</li>
-      <li>Genre</li>
-    </ul>
-    <h2>Song Name:</h2>
-    <ul>
-      <li>Artist Name</li>
-      <li>Album Name</li>
-      <li>Genre</li>
-    </ul>
-    <h2>Song Name:</h2>
-    <ul>
-      <li>Artist Name</li>
-      <li>Album Name</li>
-      <li>Genre</li>
-    </ul>
-  </div>
+  <!-- right song display -->
+    <div class="blocks" id="nowPlaying">
+      <h2>Song Name:</h2>
+<!--       <ul>
+        <li>Artist Name</li>
+        <li>Album Name</li>
+        <li>Genre</li>
+      </ul>
+      <h2>Song Name:</h2>
+      <ul>
+        <li>Artist Name</li>
+        <li>Album Name</li>
+        <li>Genre</li>
+      </ul>
+      <h2>Song Name:</h2>
+      <ul>
+        <li>Artist Name</li>
+        <li>Album Name</li>
+        <li>Genre</li>
+      </ul>
+      <h2>Song Name:</h2>
+      <ul>
+        <li>Artist Name</li>
+        <li>Album Name</li>
+        <li>Genre</li>
+      </ul> -->
+    </div>
+  </section>
 
 <!-- add song view -->
-  <div id="addSong" class="hidden">
-    <label>Song Name: <input type="text"></input></label><br>
-    <label>Artist: <input type="text"></input></label><br>
-    <label>Album: <input type="text"></input></label><br>
-    <button id="addSongButton">add</button>
-  </div>
+  <section class="hidden" id="addView">
+    <label class="inputLabel">Song Name: <input id="SName" class="inputField" type="text"></input></label><br>
+    <label class="inputLabel">Artist: <input id="SArtist" class="inputField" type="text"></input></label><br>
+    <label class="inputLabel">Album: <input id="SAlbum" class="inputField" type="text"></input></label><br>
+    <label class="inputLabel">Genre: <input id="SGenre" class="inputField" type="text"></input></label><br>
+    <button id="addButton">Add Song</button>
+  </section>
   <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
