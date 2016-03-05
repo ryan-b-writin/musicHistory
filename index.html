@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <meta charset="utf-8">
+  <title>Music History</title>
+</head>
+<body>
+
+<!-- Top nav bar -->
+  <nav class="blocks">
+    <ul>  
+      <li><a href="" class="selected" onsubmit="return false">View Music</a></li>
+      <li><a href="" id="addLink">Add Music</a></li>
+      <li><a href="">Profile</a></li>
+    </ul>
+  </nav>
+
+<!-- left options box -->
+  <form action="" class="songInfo blocks defView">
+    <label>Song Length:<br><input type="range" value="song length:"></label>
+    <br>
+<!-- artist pulldown -->
+      <label>Artist:<br><select name="artist">
+        <option value="cake">Cake</option>
+        <option value="cake">Cake</option>
+        <option value="cake">Cake</option>
+        <option value="cake">Cake</option>
+        <option value="cake">Cake</option>
+      </select></label>
+      <br>
+<!-- album pulldown -->
+      <label>Album:<br><select>
+        <option value="fashionNugget">Fashion Nugget</option>
+        <option value="fashionNugget">Fashion Nugget</option>
+        <option value="fashionNugget">Fashion Nugget</option>
+        <option value="fashionNugget">Fashion Nugget</option>
+        <option value="fashionNugget">Fashion Nugget</option>
+      </select></label>
+      <br>
+<!-- checkboxes -->
+    <section>
+      <label>Genre:<br>
+        <div class="cbox defView">
+          <label><input type="checkbox" class="genre"> Rock</label><br>
+          <label><input type="checkbox" class="genre"> Pop</label><br>
+          <label><input type="checkbox" class="genre"> Blues</label><br>
+        </div>
+        <div class="cbox">
+          <label><input type="checkbox" class="genre"> Classical</label><br>
+          <label><input type="checkbox" class="genre"> Jazz</label><br>
+          <label><input type="checkbox" class="genre"> Hip Hop</label><br>
+        </div>
+      </label>
+    </section>
+    <br>
+<!-- filter button -->
+    <a href="" class="filter">Filter</a>
+  </form>
+
+<!-- right song display -->
+  <div class="nowPlaying blocks defView">
+    <h2>Song Name:</h2>
+    <ul>
+      <li>Artist Name</li>
+      <li>Album Name</li>
+      <li>Genre</li>
+    </ul>
+    <h2>Song Name:</h2>
+    <ul>
+      <li>Artist Name</li>
+      <li>Album Name</li>
+      <li>Genre</li>
+    </ul>
+    <h2>Song Name:</h2>
+    <ul>
+      <li>Artist Name</li>
+      <li>Album Name</li>
+      <li>Genre</li>
+    </ul>
+    <h2>Song Name:</h2>
+    <ul>
+      <li>Artist Name</li>
+      <li>Album Name</li>
+      <li>Genre</li>
+    </ul>
+  </div>
+
+<!-- add song view -->
+  <div id="addSong" class="hidden">
+    <label>Song Name: <input type="text"></input></label><br>
+    <label>Artist: <input type="text"></input></label><br>
+    <label>Album: <input type="text"></input></label><br>
+    <button id="addSongButton">add</button>
+  </div>
+  <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
