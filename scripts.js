@@ -15,20 +15,30 @@ var songList = [
 {name: "default", artist: "default", album: "default", genre: "default"}]
 
 addLink.addEventListener("click", function() {
-  defView.classList.add("hidden");
-  addView.classList.add("hidden")
+  // defView.classList.add("hidden");
+  // addView.classList.add("hidden");
+  defView.style.display = "none";
+  addView.style.display = "none";
+  viewLink.classList.remove("selected");
+  addLink.classList.add("selected");
 
-  addView.classList.add("visible");
-  addView.classList.remove("hidden");
+  // addView.classList.add("visible");
+  // addView.classList.remove("hidden");
+  addView.style.display = "block";
 
 });
 
 viewLink.addEventListener("click", function() {
-  defView.classList.add("hidden");
-  addView.classList.add("hidden");
+  // defView.classList.add("hidden");
+  // addView.classList.add("hidden");
+  defView.style.display = "none";
+  addView.style.display = "none";
+  addLink.classList.remove("selected");
+  viewLink.classList.add("selected");
 
-  defView.classList.add("visible");
-  defView.classList.remove("hidden");
+  // defView.classList.add("visible");
+  // defView.classList.remove("hidden");
+  defView.style.display = "block";
 });
 
 

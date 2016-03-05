@@ -106,15 +106,20 @@ select {
 /*add song view*/
 /**/
 
-#addView {
-  display: block;
-  /*max-width: 200px;*/
-}
-
 .hidden {
+  display: none;
   visibility: hidden;
 }
 
 .visible {
-  visibility: visible;
+  display: block;
 }
+
+#addView {
+  text-align: center;
+  margin: 0 auto;
+  display: none;
+}
+
+
+
