@@ -77,6 +77,10 @@ select {
   display: block;
 }
 
+.clear {
+  clear: both;
+}
+
 /**/
 /*right song display*/
 /**/
@@ -102,6 +106,16 @@ select {
 #nowPlaying li:last-of-type {
   border: none;
 }
+
+.deleteButton {
+  display: block;
+  float: left;
+}
+
+/*.songListing {
+  float:left;
+}*/
+
 /**/
 /*add song view*/
 /**/
