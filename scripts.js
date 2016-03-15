@@ -13,6 +13,8 @@ var songList = [
 {name: "default", artist: "default", album: "default", genre: "default"}, 
 {name: "default", artist: "default", album: "default", genre: "default"}, 
 {name: "default", artist: "default", album: "default", genre: "default"}]
+var deleteButtons = document.getElementsByClassName("deleteButton");
+
 
 addLink.addEventListener("click", function() {
   // defView.classList.add("hidden");
@@ -45,11 +47,25 @@ viewLink.addEventListener("click", function() {
 
 //populate initial nowPlaying list with data from song array
 var populateList = function() {
+  var currentButton;
   nowPlaying.innerHTML = ""
   for (var i=0;i<songList.length;i++) {
-    nowPlaying.innerHTML += "<h2>Song Name: "+songList[i].name+ "</h2> <ul> <li>Artist Name: "+songList[i].artist+ "</li> <li>Album Name: "+songList[i].album+"</li> <li>Genre: "+songList[i].genre+"</li> </ul>";   
+    var songDiv = document.createElement("div");
+    songDiv.innerHTML = "<h2>Song Name: "+songList[i].name+ "</h2> <ul> <li>Artist Name: "+songList[i].artist+ "</li> <li>Album Name: "+songList[i].album+"</li> <li>Genre: "+songList[i].genre+"</li> <button class='deleteButton' id='del"+i+"'>DELETE</button></ul>";
+    nowPlaying.appendChild(songDiv);
+    currentButton = document.getElementById("del"+i);
+    currentButton.addEventListener("click", function(){
+      var divToRemove = this.parentNode.parentNode
+      this.parentNode.parentNode.parentNode.removeChild(divToRemove);
+    })
   }
 };
+
+var deleteFunction = function(){
+  deleteButtons.addEventListener("click", function(){
+
+  });
+}
 
 populateList();
 
