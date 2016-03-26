@@ -18,35 +18,30 @@ var songList = [
 {name: "default", artist: "default", album: "default", genre: "default"}]
 var deleteButtons = document.getElementsByClassName("deleteButton");
 
-
+//hide all display elements and then make selected ones visible
 addLink.addEventListener("click", function() {
-  // defView.classList.add("hidden");
-  // addView.classList.add("hidden");
   defView.style.display = "none";
   addView.style.display = "none";
   viewLink.classList.remove("selected");
   addLink.classList.add("selected");
 
-  // addView.classList.add("visible");
-  // addView.classList.remove("hidden");
   addView.style.display = "block";
 
 });
 
+//hide all display elements and then make selected ones visible
 viewLink.addEventListener("click", function() {
-  // defView.classList.add("hidden");
-  // addView.classList.add("hidden");
   defView.style.display = "none";
   addView.style.display = "none";
   addLink.classList.remove("selected");
   viewLink.classList.add("selected");
 
-  // defView.classList.add("visible");
-  // defView.classList.remove("hidden");
   defView.style.display = "block";
 });
 
-var requestSongs= function(callback, targetDiv, targetJSON) {
+//XHR request. accepts callback function, target div FOR callback function,
+// the requested JSON, and an offset number so the delete buttons work
+var requestSongs= function(callback, targetDiv, targetJSON, offset) {
       let songLoader = new XMLHttpRequest();
 
       songLoader.open("GET", targetJSON);
@@ -55,19 +50,20 @@ var requestSongs= function(callback, targetDiv, targetJSON) {
       songLoader.addEventListener("load", function () {
         songList = JSON.parse(this.responseText).songs;
         console.log("songlist",songList);
-        callback(targetDiv);
+        callback(targetDiv, offset);
       });
     }
 
-//populate initial nowPlaying list with data from song array
-var populateList = function(targetDiv) {
+//populate initial nowPlaying list with data from song array.
+//offset number allows delete buttons to have unique IDs when another JSON file is added.
+var populateList = function(targetDiv,offset) {
   var currentButton;
   targetDiv.innerHTML = "" //nowplayingList
   for (var i=0;i<songList.length;i++) {
     var songDiv = document.createElement("div");
-    songDiv.innerHTML = "<h2>Song Name: "+songList[i].name+ "</h2> <ul> <li>Artist Name: "+songList[i].artist+ "</li> <li>Album Name: "+songList[i].album+"</li> <li>Genre: "+songList[i].genre+"</li> <button class='deleteButton' id='del"+i+"'>DELETE</button></ul>";
+    songDiv.innerHTML = "<h2>Song Name: "+songList[i].name+ "</h2> <ul> <li>Artist Name: "+songList[i].artist+ "</li> <li>Album Name: "+songList[i].album+"</li> <li>Genre: "+songList[i].genre+"</li> <button class='deleteButton' id='del"+(i+offset)+"'>DELETE</button></ul>";
     targetDiv.appendChild(songDiv);
-    currentButton = document.getElementById("del"+i);
+    currentButton = document.getElementById("del"+(i+offset));
     currentButton.addEventListener("click", function(){
       var divToRemove = this.parentNode.parentNode
       this.parentNode.parentNode.parentNode.removeChild(divToRemove);
@@ -75,13 +71,8 @@ var populateList = function(targetDiv) {
   }
 };
 
-// var deleteFunction = function(){
-//   deleteButtons.addEventListener("click", function(){
-
-//   });
-// }
-
-requestSongs(populateList,nowPlayingList, "songs1.json");
+//load first JSON
+requestSongs(populateList,nowPlayingList, "songs1.json",0);
 
 //add event listener to "add button"
 addButton.addEventListener("click", function(){
@@ -92,8 +83,9 @@ addButton.addEventListener("click", function(){
   newSong.album = SAlbum.value;
   newSong.genre = SGenre.value;
   songList.unshift(newSong);
-  // songList.pop();
-  populateList();
+  var offset = 200;
+  offset++;
+  populateList(nowPlayingList,offset);
   SName.value = "";
   SArtist.value = "";
   SAlbum.value = "";
@@ -102,5 +94,5 @@ addButton.addEventListener("click", function(){
 
 //add event listener to "more button"
 moreButton.addEventListener("click", function(){
-  requestSongs(populateList,moreSongs,"songs2.json")
+  requestSongs(populateList,moreSongs,"songs2.json",5)
 });
