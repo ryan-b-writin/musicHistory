@@ -1,0 +1,19 @@
+{
+  "songs": [{
+    "artist": "CAKE",
+    "album": "Never There",
+    "genre": "Rock"
+  }, {
+    "artist": "CAKE",
+    "album": "The Distance",
+    "genre": "Rock"
+  }, {
+    "artist": "CAKE",
+    "album": "Short Skirt/Long Jacket",
+    "genre": "Rock"
+  }, {
+    "artist": "CAKE",
+    "album": "Sick of You",
+    "genre": "Rock"
+  }]
+}
