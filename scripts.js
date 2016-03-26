@@ -43,7 +43,18 @@ viewLink.addEventListener("click", function() {
   defView.style.display = "block";
 });
 
+var requestSongs= function(callback) {
+      let songLoader = new XMLHttpRequest();
 
+      songLoader.open("GET", "songs1.json");
+      songLoader.send();
+
+      songLoader.addEventListener("load", function () {
+        songList = JSON.parse(this.responseText).songs;
+        console.log("songlist",songList);
+        callback();
+      });
+    }
 
 //populate initial nowPlaying list with data from song array
 var populateList = function() {
@@ -67,7 +78,7 @@ var deleteFunction = function(){
   });
 }
 
-populateList();
+requestSongs(populateList);
 
 //add event listener to "add button"
 addButton.addEventListener("click", function(){
