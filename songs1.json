@@ -1,19 +1,23 @@
 {
   "songs": [{
+    "name": "Never There",
     "artist": "CAKE",
-    "album": "Never There",
+    "album": "Fashion Nugget",
     "genre": "Rock"
   }, {
+    "name": "The Distance",
     "artist": "CAKE",
-    "album": "The Distance",
+    "album": "Fashion Nugget",
     "genre": "Rock"
   }, {
+    "name": "Short Skirt/Long Jacket",
     "artist": "CAKE",
-    "album": "Short Skirt/Long Jacket",
+    "album": "Fashion Nugget",
     "genre": "Rock"
   }, {
+    "name": "Sick Of You",
     "artist": "CAKE",
-    "album": "Sick of You",
+    "album": "Fashion Nugget",
     "genre": "Rock"
   }]
 }

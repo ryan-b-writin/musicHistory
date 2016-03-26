@@ -4,6 +4,7 @@ var addButton = document.getElementById("addButton")
 var viewLink = document.getElementById("viewLink");
 var defView = document.getElementById("defView");
 var nowPlaying = document.getElementById("nowPlaying");
+var nowPlayingList = document.getElementById("nowPlayingList")
 var SName = document.getElementById("SName");
 var SArtist = document.getElementById("SArtist");
 var SAlbum = document.getElementById("SAlbum");
@@ -59,11 +60,11 @@ var requestSongs= function(callback) {
 //populate initial nowPlaying list with data from song array
 var populateList = function() {
   var currentButton;
-  nowPlaying.innerHTML = ""
+  nowPlayingList.innerHTML = ""
   for (var i=0;i<songList.length;i++) {
     var songDiv = document.createElement("div");
     songDiv.innerHTML = "<h2>Song Name: "+songList[i].name+ "</h2> <ul> <li>Artist Name: "+songList[i].artist+ "</li> <li>Album Name: "+songList[i].album+"</li> <li>Genre: "+songList[i].genre+"</li> <button class='deleteButton' id='del"+i+"'>DELETE</button></ul>";
-    nowPlaying.appendChild(songDiv);
+    nowPlayingList.appendChild(songDiv);
     currentButton = document.getElementById("del"+i);
     currentButton.addEventListener("click", function(){
       var divToRemove = this.parentNode.parentNode
@@ -89,7 +90,7 @@ addButton.addEventListener("click", function(){
   newSong.album = SAlbum.value;
   newSong.genre = SGenre.value;
   songList.unshift(newSong);
-  songList.pop();
+  // songList.pop();
   populateList();
   SName.value = "";
   SArtist.value = "";
