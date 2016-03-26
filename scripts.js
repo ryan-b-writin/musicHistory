@@ -9,6 +9,8 @@ var SName = document.getElementById("SName");
 var SArtist = document.getElementById("SArtist");
 var SAlbum = document.getElementById("SAlbum");
 var SGenre = document.getElementById("SGenre");
+var moreButton = document.getElementById("more");
+var moreSongs = document.getElementById("moreSongsGoHere");
 var songList = [
 {name: "default", artist: "default", album: "default", genre: "default"},
 {name: "default", artist: "default", album: "default", genre: "default"}, 
@@ -44,27 +46,27 @@ viewLink.addEventListener("click", function() {
   defView.style.display = "block";
 });
 
-var requestSongs= function(callback) {
+var requestSongs= function(callback, targetDiv, targetJSON) {
       let songLoader = new XMLHttpRequest();
 
-      songLoader.open("GET", "songs1.json");
+      songLoader.open("GET", targetJSON);
       songLoader.send();
 
       songLoader.addEventListener("load", function () {
         songList = JSON.parse(this.responseText).songs;
         console.log("songlist",songList);
-        callback();
+        callback(targetDiv);
       });
     }
 
 //populate initial nowPlaying list with data from song array
-var populateList = function() {
+var populateList = function(targetDiv) {
   var currentButton;
-  nowPlayingList.innerHTML = ""
+  targetDiv.innerHTML = "" //nowplayingList
   for (var i=0;i<songList.length;i++) {
     var songDiv = document.createElement("div");
     songDiv.innerHTML = "<h2>Song Name: "+songList[i].name+ "</h2> <ul> <li>Artist Name: "+songList[i].artist+ "</li> <li>Album Name: "+songList[i].album+"</li> <li>Genre: "+songList[i].genre+"</li> <button class='deleteButton' id='del"+i+"'>DELETE</button></ul>";
-    nowPlayingList.appendChild(songDiv);
+    targetDiv.appendChild(songDiv);
     currentButton = document.getElementById("del"+i);
     currentButton.addEventListener("click", function(){
       var divToRemove = this.parentNode.parentNode
@@ -73,13 +75,13 @@ var populateList = function() {
   }
 };
 
-var deleteFunction = function(){
-  deleteButtons.addEventListener("click", function(){
+// var deleteFunction = function(){
+//   deleteButtons.addEventListener("click", function(){
 
-  });
-}
+//   });
+// }
 
-requestSongs(populateList);
+requestSongs(populateList,nowPlayingList, "songs1.json");
 
 //add event listener to "add button"
 addButton.addEventListener("click", function(){
@@ -98,4 +100,7 @@ addButton.addEventListener("click", function(){
   SGenre.value = "";
 })
 
-
+//add event listener to "more button"
+moreButton.addEventListener("click", function(){
+  requestSongs(populateList,moreSongs,"songs2.json")
+});
