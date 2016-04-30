@@ -63,12 +63,6 @@
   <!-- right song display -->
     <div class="blocks" id="nowPlaying">
       <div id="nowPlayingList">
-  <!--  <h2>Song Name:</h2>
-        <ul>
-          <li>Artist Name</li>
-          <li>Album Name</li>
-          <li>Genre</li>
-        </ul> -->
       </div>
       <div id="moreSongsGoHere">
       </div>
@@ -78,12 +72,28 @@
 
 <!-- add song view -->
   <section id="addView">
-    <label class="inputLabel">Song Name: <input id="SName" class="inputField" type="text"></input></label><br>
+    <!-- <label class="inputLabel">Song Name: <input id="SName" class="inputField" type="text"></input></label><br>
     <label class="inputLabel">Artist: <input id="SArtist" class="inputField" type="text"></input></label><br>
     <label class="inputLabel">Album: <input id="SAlbum" class="inputField" type="text"></input></label><br>
     <label class="inputLabel">Genre: <input id="SGenre" class="inputField" type="text"></input></label><br>
-    <button id="addButton">Add Song</button>
-  </section>
+    <button id="addButton">Add Song</button> -->
+
+    <div id="leftAddBlock">
+      <p>Song Name: </p>
+      <p>Artist: </p>
+      <p>Album: </p>
+      <p>Genre: </p>
+    </div>
+    <div id="rightAddBlock">
+      <input id="SName" class="inputField" type="text"></input><br>
+      <input id="SArtist" class="inputField" type="text"></input><br>
+      <input id="SAlbum" class="inputField" type="text"></input><br>
+      <input id="SGenre" class="inputField" type="text"></input>
+    </div>
+      <button id="addButton">Add Song</button>
+ </section>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
