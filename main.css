@@ -131,8 +131,20 @@ select {
 
 #addView {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 40%;
   display: none;
+}
+
+#leftAddBlock{
+  display: block;
+  float: left;
+  line-height: .25em;
+}
+
+#rightAddBlock{
+  margin-top: .60em;
+  display: block;
+  float: right;
 }
 
 
