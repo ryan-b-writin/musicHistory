@@ -1,0 +1,105 @@
+/*main body*/
+body {
+  margin: 8%;
+  margin-top: 3%; }
+
+.blocks {
+  margin: 1%; }
+
+/**/
+/*top nav bar*/
+/**/
+nav {
+  border: .18em solid black;
+  background-color: #FFB4B0;
+  padding: .18em;
+  margin-bottom: 4em; }
+  nav li {
+    display: inline-block;
+    border-right: .18em solid black;
+    padding: 0 .25em; }
+    nav li:last-of-type {
+      border: none; }
+    nav li .selected {
+      text-decoration: none;
+      color: black; }
+
+/**/
+/*left song options*/
+/**/
+.songInfo {
+  background-color: #4DD7FA;
+  border: .18em solid black;
+  float: left;
+  padding: 1.5%;
+  line-height: 1.75;
+  width: 14%;
+  height: 65%;
+  min-width: 8.75em; }
+  .songInfo select {
+    display: block;
+    width: 95%; }
+  .songInfo .cbox {
+    display: block;
+    float: left;
+    margin-bottom: 1.2em; }
+  .songInfo .filter {
+    color: black;
+    margin: 1em;
+    margin-top: 4.4em;
+    border: .18em solid black;
+    background-color: lightgrey;
+    border-radius: .4em;
+    text-decoration: none;
+    text-align: center;
+    display: block; }
+  .songInfo .range {
+    max-width: 95%; }
+
+.clear {
+  clear: both; }
+
+/**/
+/*right song display*/
+/**/
+.nowPlaying {
+  background-color: #FEFAC0;
+  float: right;
+  border: .18em solid black;
+  width: 69%;
+  padding: 3%;
+  min-height: 25em; }
+  .nowPlaying .deleteButton {
+    display: block;
+    float: left; }
+  .nowPlaying h2 {
+    color: #785616; }
+  .nowPlaying li {
+    display: inline-block;
+    border-right: .18em solid black;
+    padding: 0 .25em; }
+    .nowPlaying li:last-of-type {
+      border: none; }
+
+/**/
+/*add song view*/
+/**/
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+.visible {
+  display: block; }
+
+.addView {
+  text-align: center;
+  margin: 0 40%;
+  display: none; }
+  .addView .leftAddBlock {
+    display: block;
+    float: left;
+    line-height: .25em; }
+  .addView .rightAddBlock {
+    margin-top: .60em;
+    display: block;
+    float: right; }

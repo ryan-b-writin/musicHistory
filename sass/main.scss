@@ -1,0 +1,134 @@
+// to do
+// -variable colors
+$navBarCoral: #FFB4B0;
+$songInfoBlue: #4DD7FA;
+$nowPlayingYellow: #FEFAC0;
+/*main body*/
+body {
+  margin: 8%;
+  margin-top: 3%;
+}
+
+.blocks {
+  margin: 1%;
+}
+/**/
+/*top nav bar*/
+/**/
+nav{  
+  border: .18em solid black;
+  background-color: $navBarCoral;
+  padding: .18em;
+  margin-bottom: 4em;
+  li {
+    display: inline-block;
+    border-right: .18em solid black;
+    padding: 0 .25em;
+    &:last-of-type {
+      border: none;
+    }
+    .selected { 
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+/**/
+/*left song options*/
+/**/
+.songInfo {
+  background-color: $songInfoBlue;
+  border: .18em solid black;
+  float: left;
+  padding: 1.5%;
+  line-height: 1.75;
+  width: 14%;
+  height: 65%;
+  min-width: 8.75em;
+  select { 
+    display: block;
+    width: 95%;
+  }
+  .cbox {
+    display: block;
+    float: left;
+    margin-bottom: 1.2em;
+  }
+  .filter {
+    color: black;
+    margin: 1em;
+    margin-top: 4.4em;
+    border: .18em solid black;
+    background-color: lightgrey;
+    border-radius: .4em;
+    text-decoration: none;
+    text-align: center; 
+    display: block;
+  }
+  .range {
+    max-width: 95%;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+/**/
+/*right song display*/
+/**/
+.nowPlaying {
+  background-color: $nowPlayingYellow;
+  float: right;
+  border: .18em solid black;
+  width: 69%;
+  padding: 3%;
+  min-height: 25em;
+  .deleteButton {
+    display: block;
+    float: left;
+  }
+  h2 {
+    color: #785616;
+  }
+  li { 
+    display: inline-block;
+    border-right: .18em solid black;
+    padding: 0 .25em;
+    &:last-of-type {
+      border: none;
+    }
+  }
+}
+
+/**/
+/*add song view*/
+/**/
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visible {
+  display: block;
+}
+
+.addView {
+  text-align: center;
+  margin: 0 40%;
+  display: none;
+  .leftAddBlock{
+    display: block;
+    float: left;
+    line-height: .25em;
+  }
+  .rightAddBlock{
+    margin-top: .60em;
+    display: block;
+    float: right;
+  }
+}
+
+

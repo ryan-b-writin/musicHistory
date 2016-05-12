@@ -51,7 +51,7 @@ $(document).ready(function(){
   };
 
   //load first JSON
-  requestSongs(populateList, $("#nowPlayingList"), "songs1.json", initialOffset);
+  requestSongs(populateList, $("#nowPlayingList"), "../songs1.json", initialOffset);
 
   //add event listener to "add button"
   $("#addButton").click(function(){
@@ -75,6 +75,6 @@ $(document).ready(function(){
 
   //add event listener to "more button"
   $("#more").click(function(){
-    requestSongs(populateList, $("#nowPlayingList"),"songs2.json",5)
+    requestSongs(populateList, $("#nowPlayingList"),"../songs2.json",5)
   });
 })
