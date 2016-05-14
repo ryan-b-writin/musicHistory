@@ -1,23 +1,28 @@
 {
-  "songs": [{
-    "name": "Daria",
-    "artist": "CAKE",
-    "album": "Fashion Nugget",
-    "genre": "Rock"
-  }, {
-    "name": "The Distance",
-    "artist": "CAKE",
-    "album": "Fashion Nugget",
-    "genre": "Rock"
-  }, {
-    "name": "Stickshifts and Safetybelts",
-    "artist": "CAKE",
-    "album": "Fashion Nugget",
-    "genre": "Rock"
-  }, {
-    "name": "I Will Survive",
-    "artist": "CAKE",
-    "album": "Fashion Nugget",
-    "genre": "Rock"
-  }]
+  "songs": {
+    "daria": {
+      "name": "Daria",
+      "artist": "CAKE",
+      "album": "Fashion Nugget",
+      "genre": "Rock"
+    },
+    "distance": {
+      "name": "The Distance",
+      "artist": "CAKE",
+      "album": "Fashion Nugget",
+      "genre": "Rock"
+    },
+    "stickshifts": {
+      "name": "Stickshifts and Safetybelts",
+      "artist": "CAKE",
+      "album": "Fashion Nugget",
+      "genre": "Rock"
+    },
+    "survive": {
+      "name": "I Will Survive",
+      "artist": "CAKE",
+      "album": "Fashion Nugget",
+      "genre": "Rock"
+    }
+  }
 }
