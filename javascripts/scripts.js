@@ -16,6 +16,11 @@ $(document).ready(function(){
     $("#addLink").removeClass("selected");
     $("#viewLink").addClass("selected");
     $("#defView").css("display", "block");
+    $(".addButton").removeAttr("id");
+    $("#SName").val("");
+    $("#SArtist").val("");
+    $("#SAlbum").val("");
+    $("#SGenre").val("");
   }
 
   //hide all display elements and then make selected ones visible
@@ -83,10 +88,6 @@ function clearAndReset(){
       $("#nowPlayingList").html("");
       requestSongs();
       showListView();
-      $("#SName").val("");
-      $("#SArtist").val("");
-      $("#SAlbum").val("");
-      $("#SGenre").val("");
 }
 
   $(".addButton").click(function(){
