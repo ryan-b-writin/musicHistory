@@ -23,6 +23,30 @@
       "artist": "CAKE",
       "album": "Fashion Nugget",
       "genre": "Rock"
+    },
+    "skirt": {
+      "name": "Short Skirt/Long Jacket",
+      "artist": "CAKE",
+      "album": "Comfort Eagle",
+      "genre": "Rock"
+    },
+    "never": {
+      "name": "Never There",
+      "artist": "CAKE",
+      "album": "Comfort Eagle",
+      "genre": "Rock"
+    },
+    "madly": {
+      "name": "Love You Madly",
+      "artist": "CAKE",
+      "album": "Comfort Eagle",
+      "genre": "Rock"
+    },
+    "comfort": {
+      "name": "Comfort Eagle",
+      "artist": "CAKE",
+      "album": "Comfort Eagle",
+      "genre": "Rock"
     }
   }
 }

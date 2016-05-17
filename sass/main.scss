@@ -9,6 +9,10 @@ body {
   margin-top: 3%;
 }
 
+ul{
+  padding: 1%
+}
+
 .blocks {
   margin: 1%;
 }
@@ -86,8 +90,11 @@ nav{
   padding: 3%;
   min-height: 25em;
   .deleteButton {
-    display: block;
     float: left;
+    margin-left: 1.5%
+  }
+  button{
+    display: block;
   }
   h2 {
     color: #785616;
